@@ -8,10 +8,9 @@
 ***
 ### ***Technologies Used***
 * React
-* Python
-* Tailwind
-* Flask
-* PostgreSQL
+* MongoDb
+* Express
+* Node.js
 
 ***
 ### ***Getting Started***
