@@ -11,6 +11,7 @@
 * MongoDb
 * Express
 * Node.js
+* Tailwind
 
 ***
 ### ***Getting Started***
