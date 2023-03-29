@@ -9,8 +9,9 @@
 ### ***Technologies Used***
 * React
 * MongoDb
-* Express
-* Node.js
+* Flask
+* Python
+* Tailwind
 
 ***
 ### ***Getting Started***
