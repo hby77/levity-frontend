@@ -1,6 +1,8 @@
 const Episode = () => {
   return (
-    <div>Episode</div>
+    <div>
+      
+    </div>
   )
 }
 export default Episode

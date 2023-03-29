@@ -1,6 +1,8 @@
 const EpisodeList = () => {
   return (
-    <div>EpisodeList</div>
+    <div>
+      
+    </div>
   )
 }
 export default EpisodeList
