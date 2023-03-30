@@ -3,7 +3,6 @@ import EpisodeForm from "./pages/EpisodeForm"
 import ContactForm from "./pages/ContactForm"
 import EpisodeList from "./pages/EpisodeList"
 import Footer from "./components/Footer"
-import Episode from "./pages/Episode"
 import AboutUs from "./pages/AboutUs"
 import SignIn from "./pages/SignIn"
 import Nav from "./components/Nav"
@@ -18,7 +17,6 @@ import Home from "./pages/Home"
           <Route path="/episode-form" element={<EpisodeForm />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/episode" element={<Episode />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Home />} />
         </Routes>
