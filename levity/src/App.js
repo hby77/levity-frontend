@@ -1,3 +1,4 @@
+import EpisodeDetails from "./pages/EpisodeDetails"
 import { Route, Routes } from "react-router-dom"
 import EpisodeForm from "./pages/EpisodeForm"
 import ContactForm from "./pages/ContactForm"
@@ -9,10 +10,12 @@ import Nav from "./components/Nav"
 import Home from "./pages/Home"
 
   function App() {
+
     return (
       <div>
         <Nav />
         <Routes>
+          <Route path="/episode-details/:id" element={<EpisodeDetails />} />
           <Route path="/episode-list" element={<EpisodeList />} />
           <Route path="/episode-form" element={<EpisodeForm />} />
           <Route path="/contact" element={<ContactForm />} />

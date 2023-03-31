@@ -14,7 +14,7 @@ console.log(titlecolor)
           alt=""
         />
       </div>
-      <div className="relative mx-auto max-w-full py-24 sm:py-32 lg:py-40 lg:px-32 ">
+      <div className="relative mx-auto max-w-full py-8 sm:py-32 lg:py-40 lg:px-32 ">
         <div
           className="pl-6 pr-6 md:mr-auto md:w-2/3 md:pr-16 lg:w-1/2 lg:pr-24 lg:pl-0 xl:pr-32"
         >

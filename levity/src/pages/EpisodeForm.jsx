@@ -5,6 +5,7 @@ const EpisodeForm = () => {
 
 const [Form, setForm] = useState({
   title: '',
+  date: '',
   description: '',
   image: ''
 })
@@ -40,9 +41,27 @@ const handleSubmit = async (e) => {
                 type="text"
                 name="title"
                 id="title"
+                required
                 onChange={handleChange}
                 value={Form.title}
                 autoComplete="given-name"
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-2">
+            <label htmlFor="date" className="block text-sm font-semibold leading-6 text-gray-900">
+              Date
+            </label>
+            <div className="mt-2.5">
+              <input
+                type="date"
+                name="date"
+                id="date"
+                required
+                onChange={handleChange}
+                value={Form.date}
+                autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -56,6 +75,7 @@ const handleSubmit = async (e) => {
                 type="text"
                 name="description"
                 id="description"
+                required
                 onChange={handleChange}
                 value={Form.description}
                 autoComplete="organization"
@@ -72,6 +92,7 @@ const handleSubmit = async (e) => {
                 type="text"
                 name="image"
                 id="image"
+                required
                 onChange={handleChange}
                 value={Form.image}
                 autoComplete="email"
