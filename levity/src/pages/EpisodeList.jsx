@@ -3,12 +3,14 @@ import axios from "axios"
 import EpisodeCards from "../components/EpisodeCards"
 
 
+
 const EpisodeList = () => {
 
   const [episodes, setEpisodes] = useState([])
 
   const getAllEpisodes = async () => {
     const response = await axios.get("http://127.0.0.1:5000/episodes")
+    await response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
     console.log(response)
     setEpisodes(response.data)
   }
@@ -23,6 +25,8 @@ const EpisodeList = () => {
     getAllEpisodes()
   }
 
+  
+
 
   return (
     <div>
@@ -35,10 +39,8 @@ const EpisodeList = () => {
             description={episode.description}
             image={episode.image}
             id={episode._id.$oid}
+            handleDelete={handleDelete}
           />
-          <button onClick={() => handleDelete(episode._id.$oid)}>
-            <span>delete</span>
-          </button>
         </div>
       ))}
     </div>

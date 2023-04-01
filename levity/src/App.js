@@ -1,3 +1,4 @@
+import EditEpisodeForm from "./pages/EditEpisodeForm"
 import EpisodeDetails from "./pages/EpisodeDetails"
 import { Route, Routes } from "react-router-dom"
 import EpisodeForm from "./pages/EpisodeForm"
@@ -16,6 +17,7 @@ import Home from "./pages/Home"
         <Nav />
         <Routes>
           <Route path="/episode-details/:id" element={<EpisodeDetails />} />
+          <Route path="/episode-form/:id" element={<EditEpisodeForm />} />
           <Route path="/episode-list" element={<EpisodeList />} />
           <Route path="/episode-form" element={<EpisodeForm />} />
           <Route path="/contact" element={<ContactForm />} />
