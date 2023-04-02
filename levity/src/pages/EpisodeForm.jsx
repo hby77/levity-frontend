@@ -1,28 +1,34 @@
 import axios from "axios"
 import { useState } from "react"
+import { createEpisode } from "../services/episode"
+import { useNavigate } from "react-router-dom"
 
 const EpisodeForm = () => {
 
-const [Form, setForm] = useState({
-  title: '',
-  date: '',
-  description: '',
-  image: ''
-})
+  const navigate = useNavigate()
 
-const handleChange = (e) => {
-  setForm({ ...Form, [e.target.id]: e.target.value})
-}
+  const [form, setForm] = useState({
+    title: '',
+    date: '',
+    description: '',
+    image: ''
+  })
 
-
-const handleSubmit = async (e) => {
-  e.preventDefault()
-  const response = await axios.post("http://127.0.0.1:5000/episodes", Form)
-  console.log(response)
-}
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.id]: e.target.value })
+  }
 
 
-  return (
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await createEpisode(form)
+    console.log("CREATE EPISODE", res)
+    navigate("/episode-list")
+    window.location.reload()
+  }
+
+
+  return localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Episode Form</h2>
@@ -43,7 +49,7 @@ const handleSubmit = async (e) => {
                 id="title"
                 required
                 onChange={handleChange}
-                value={Form.title}
+                value={form.title}
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -60,7 +66,7 @@ const handleSubmit = async (e) => {
                 id="date"
                 required
                 onChange={handleChange}
-                value={Form.date}
+                value={form.date}
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -77,7 +83,7 @@ const handleSubmit = async (e) => {
                 id="description"
                 required
                 onChange={handleChange}
-                value={Form.description}
+                value={form.description}
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -94,7 +100,7 @@ const handleSubmit = async (e) => {
                 id="image"
                 required
                 onChange={handleChange}
-                value={Form.image}
+                value={form.image}
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -110,7 +116,7 @@ const handleSubmit = async (e) => {
           </button>
         </div>
       </form>
-    </div>
+    </div >
   )
 }
 

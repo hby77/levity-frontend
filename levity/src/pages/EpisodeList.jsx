@@ -1,35 +1,27 @@
-import { useState, useEffect } from "react"
 import axios from "axios"
 import EpisodeCards from "../components/EpisodeCards"
+import { deleteEpisode } from "../services/episode"
+import { useNavigate } from "react-router-dom"
 
 
 
-const EpisodeList = () => {
-
-  const [episodes, setEpisodes] = useState([])
-
-  const getAllEpisodes = async () => {
-    const response = await axios.get("http://127.0.0.1:5000/episodes")
-    await response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
-    console.log(response)
-    setEpisodes(response.data)
-  }
-
-  useEffect(() => {
-    getAllEpisodes()
-  }, [])
+const EpisodeList = ({ episodes, getAllEpisodes }) => {
 
   const handleDelete = async (id) => {
-    const res = await axios.delete(`http://127.0.0.1:5000/single_episode/${id}`)
-    console.log("Hello", res)
+    const res = await deleteEpisode(id)
+    console.log("DELETED", res)
     getAllEpisodes()
   }
 
-  
-
+  const navigate = useNavigate()
 
   return (
     <div>
+      {localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (<>
+        <button onClick={() => navigate(`/episode-form`)}
+          className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 m-2">
+          New Episode
+        </button></>)}
       {episodes.map((episode) => (
         <div key={episode._id.$oid}>
           <EpisodeCards

@@ -3,14 +3,14 @@ import HomePic from "../images/LevityHero.gif"
 import Logos from "../components/Logos"
 import Hero from "../components/Hero"
 
-const Home = () => {
+const Home = ({episodes}) => {
   return (
     <div>
       <Hero 
         picture={HomePic}
       />
       <Logos />
-      <RecentEpisodes />
+      <RecentEpisodes episodes={episodes}/>
     </div>
   )
 }

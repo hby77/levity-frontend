@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import { updateEpisode } from "../services/episode"
 import axios from "axios"
 
 
-const EditEpisodeForm = () => {
+const EditEpisodeForm = ({getAllEpisodes}) => {
   
-  const {id} = useParams()
-
+  const { id } = useParams()
+  const navigate = useNavigate()
   const [episode, setEpisode] = useState({})
-  const [Form, setForm] = useState({
+  const [form, setForm] = useState({
     title: '',
     date: '',
     description: '',
@@ -16,22 +17,24 @@ const EditEpisodeForm = () => {
   })
   
   const handleChange = (e) => {
-    setForm({ ...Form, [e.target.id]: e.target.value})
+    setForm({ ...form, [e.target.id]: e.target.value})
   }
   
   
   const handleSubmit = async (e) => {
     e.preventDefault()
     checkForm()
-    const response = await axios.put(`http://127.0.0.1:5000/single_episode/${id}`, Form)
-    console.log(response)
+    const res = await updateEpisode(id, form)
+    console.log("UPDATE EPISODE", res)
+    navigate(`/episode-list`)
+    getAllEpisodes()
   }
 
   const checkForm = () => {
-    if (Form.title === "") Form.title = episode.title
-    if (Form.date === "") Form.date = episode.date
-    if (Form.description === "") Form.description = episode.description
-    if (Form.image === "") Form.image = episode.image
+    if (form.title === "") form.title = episode.title
+    if (form.date === "") form.date = episode.date
+    if (form.description === "") form.description = episode.description
+    if (form.image === "") form.image = episode.image
   }
 
   useEffect(() => {
@@ -45,7 +48,7 @@ const getUpdate = async () => {
   setEpisode(response.data) 
 }
 
-  return (
+  return localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Episode Form</h2>
@@ -67,7 +70,7 @@ const getUpdate = async () => {
                 placeholder={episode.title}
                 required
                 onChange={handleChange}
-                value={Form.title === "" ? episode.title : Form.title}
+                value={form.title === "" ? episode.title : form.title}
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -85,7 +88,7 @@ const getUpdate = async () => {
                 placeholder={episode.date}
                 required
                 onChange={handleChange}
-                value={Form.date === "" ? episode.date : Form.date}
+                value={form.date === "" ? episode.date : form.date}
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -103,7 +106,7 @@ const getUpdate = async () => {
                 placeholder={episode.description}
                 required
                 onChange={handleChange}
-                value={Form.description === "" ? episode.description : Form.description}
+                value={form.description === "" ? episode.description : form.description}
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -121,7 +124,7 @@ const getUpdate = async () => {
                 placeholder={episode.image}
                 required
                 onChange={handleChange}
-                value={Form.image === "" ? episode.image : Form.image}
+                value={form.image === "" ? episode.image : form.image}
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />

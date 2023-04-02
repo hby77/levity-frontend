@@ -34,24 +34,24 @@ const Nav = () => {
                 </div> */}
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <Link 
-                  to="/"
-                  className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f1b8d5] hover:border-gray-300 hover:text-[#f86122]">
+                  <Link
+                    to="/"
+                    className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f1b8d5] hover:border-gray-300 hover:text-[#f86122]">
                     <h6>HOME</h6>
                   </Link>
-                  <Link 
-                  to="/about-us"
-                  className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#ace81e] hover:border-gray-300 hover:text-[#7d9ce2]">
+                  <Link
+                    to="/about-us"
+                    className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#ace81e] hover:border-gray-300 hover:text-[#7d9ce2]">
                     <h6>ABOUT</h6>
                   </Link>
-                  <Link 
-                  to="/episode-list"
-                  className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#65e3c6] hover:border-gray-300 hover:text-[#2035ab]">
+                  <Link
+                    to="/episode-list"
+                    className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#65e3c6] hover:border-gray-300 hover:text-[#2035ab]">
                     <h6>EPISODES</h6>
                   </Link>
-                  <Link 
-                  to="/contact"
-                  className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f3b918] hover:border-gray-300 hover:text-[#169342]">
+                  <Link
+                    to="/contact"
+                    className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f3b918] hover:border-gray-300 hover:text-[#169342]">
                     <h6>CONTACT</h6>
                   </Link>
                 </div>
@@ -138,34 +138,38 @@ const Nav = () => {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 pt-2 pb-3">
               {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-              >
-                HOME
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-indigo-700"
-              >
-                ABOUT
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                EPISODES
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700"
-              >
-                CONTACT
-              </Disclosure.Button>
+              <Link to="/">
+                <Disclosure.Button
+                  as="a"
+                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-black text-[#f1b8d5] hover:border-gray-300 hover:bg-gray-50 hover:text-[#f86122]"
+                >
+                  HOME
+                </Disclosure.Button>
+              </Link>
+              <Link to="/about-us">
+                <Disclosure.Button
+                  as="a"
+                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-black text-[#ace81e] hover:border-gray-300 hover:bg-gray-50 hover:text-[#7d9ce2]"
+                >
+                  ABOUT
+                </Disclosure.Button>
+              </Link>
+              <Link to="/episode-list">
+                <Disclosure.Button
+                  as="a"
+                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-black text-[#65e3c6] hover:border-gray-300 hover:bg-gray-50 hover:text-[#2035ab]"
+                >
+                  EPISODES
+                </Disclosure.Button>
+              </Link>
+              <Link to="/contact">
+                <Disclosure.Button
+                  as="a"
+                  className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-black text-[#f3b918] hover:border-gray-300 hover:bg-gray-50 hover:text-[#169342]"
+                >
+                  CONTACT
+                </Disclosure.Button>
+              </Link>
             </div>
             {/* <div className="border-t border-gray-200 pt-4 pb-3">
               <div className="flex items-center px-4">
