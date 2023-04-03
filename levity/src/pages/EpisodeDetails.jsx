@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
 import axios from "axios"
+import Logos from "../components/Logos"
 
 const EpisodeDetails = () => {
 
@@ -19,6 +20,7 @@ const EpisodeDetails = () => {
     setEpisode(response.data)
   }
   return (
+    <>
     <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className=" text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{episode.title}</h2>
@@ -39,8 +41,9 @@ const EpisodeDetails = () => {
         </div>
       </div>
       {/* above this is an empty indigobox for the podcast episode */}
-
     </div>
+      <Logos />
+    </>
 
   )
 }

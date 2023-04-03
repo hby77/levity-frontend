@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   const navigation = {
     main: [
@@ -93,7 +95,10 @@ const Footer = () => {
             ))}
           </div>
           <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            <Link to={'http://localhost:3000/signin'}>
+            &copy; 2023 The Levity Podcast, Inc. All rights reserved.
+            </Link>
+        
           </p>
         </div>
       </footer>

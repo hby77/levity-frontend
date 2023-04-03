@@ -7,18 +7,18 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
     <div className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-28">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
-          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+          <div className=" space-y-20 lg:space-y-20">
             <article className="relative isolate flex flex-col gap-12 lg:flex-row">
-              <div className="relative aspect-[16/9]  sm:aspect-[2/1] lg:aspect-[square] lg:w-96 lg:shrink-0">
+              <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/5] lg:w-96 lg:shrink-0">
                 <img
                   src={image}
                   alt=""
                   className="absolute inset- h-full w-full bg-gray-50 object-cover"
                 />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+                <div className="absolute inset-0  ring-1 ring-inset ring-gray-900/10" />
               </div>
               <div>
-                <div className="flex items-center gap-x-4 text-2xl">
+                <div className="flex items-center gap-x-4 text-2xl lg:mt-20">
                   <time dateTime={date} className="text-gray-500">
                     {date}
                   </time>

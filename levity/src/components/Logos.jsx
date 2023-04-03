@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 const Logos = () => {
 
   return (
-    <div className="bg-gray-700 py-10 sm:py-32">
+    <div className="bg-gray-900 py-10 sm:py-32">
       <div className="mx-auto  px-6 lg:px-8">
         {/* When you want to add more columns just add by increasing grid cols */}
         <div className="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
