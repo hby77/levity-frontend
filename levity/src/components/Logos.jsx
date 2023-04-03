@@ -6,6 +6,7 @@ import Instagram from "../images/InstagramLogo.png"
 import { Link } from "react-router-dom"
 const Logos = () => {
 
+
   return (
     <div className="bg-gray-900 py-10 sm:py-32">
       <div className="mx-auto  px-6 lg:px-8">
