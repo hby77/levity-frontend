@@ -3,7 +3,7 @@ import Client from "./api"
 export const createEpisode =  async (form) => {
   try {
     const res = Client.post(
-      "http://127.0.0.1:5000/episodes", { title: form.title, description: form.description, image: form.image, date: form.date },
+      "http://127.0.0.1:5000/episodes", { title: form.title, description: form.description, image: form.image, date: form.date, likes: 0 },
       {
         headers: {
           "Content-Type": "application/json",

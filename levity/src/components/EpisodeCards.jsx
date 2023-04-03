@@ -1,10 +1,22 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
+// import { useParams } from "react-router-dom"
 const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => {
+
+  // const { id } = useParams()
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   checkForm()
+  //   const res = await updateEpisode(id, form)
+  //   console.log("UPDATE EPISODE", res)
+  //   navigate(`/episode-list`)
+  //   getAllEpisodes()
+  // }
 
   const navigate = useNavigate()
   return (
-    <div className="bg-white py-12">
+    <div className="bg-[#e7e9ea] py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-28">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className=" space-y-20 lg:space-y-20">

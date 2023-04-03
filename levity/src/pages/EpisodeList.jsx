@@ -16,10 +16,10 @@ const EpisodeList = ({ episodes, getAllEpisodes }) => {
   const navigate = useNavigate()
 
   return (
-    <div>
+    <div className="bg-[#e7e9ea]">
       {localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (<>
         <button onClick={() => navigate(`/episode-form`)}
-          className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 m-2">
+          className=" rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 m-2">
           New Episode
         </button></>)}
       {episodes.map((episode) => (
