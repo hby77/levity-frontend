@@ -40,3 +40,4 @@ console.log(titlecolor)
 }
 
 export default PicLeft
+
