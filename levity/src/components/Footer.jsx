@@ -80,11 +80,11 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl overflow-hidden py-8 px-6  lg:px-8">
           <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
             {navigation.main.map((item) => (
-              <div key={item.name} className="pb-6">
-                <motion.a whileHover={{ scale: 1.5 }} href={item.href} className="text-2xl font-black leading-6 text-white hover:text-gray-600">
+              <motion.div whileHover={{ scale: 1.5 }} key={item.name} className="pb-6">
+                <a href={item.href} className="text-2xl font-black leading-6 text-white hover:text-gray-600">
                   {item.name}
-                </motion.a>
-              </div>
+                </a>
+              </motion.div>
             ))}
           </nav>
           <div className="mt-10 flex justify-center space-x-10">

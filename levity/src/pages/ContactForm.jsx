@@ -27,7 +27,7 @@ const ContactForm = () => {
           alt=""
         />
       </div>
-      <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">
+      <div className="pb-12 pt-16 sm:pt-20 lg:mx-auto lg:grid lg:grid-cols-2 ">
         <div className="flex justify-center px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">SUBMIT A STORY OR QUESTION</h2>
@@ -95,7 +95,8 @@ const ContactForm = () => {
               <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  
+                  className="bg-[#e7e9ea] transform  border-2 w-24 h-24 rounded-full duration-500 border-black hover:bg-black hover:text-white text-2xl m-auto inset-0 font-semibold leading-7 text-center text-gray-800"
                 >
                   Submit
                 </button>
