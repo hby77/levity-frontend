@@ -28,7 +28,7 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
                   alt=""
                   className="absolute inset- h-full w-full bg-gray-50 object-cover"
                 />
-                <div className="absolute inset-0  ring-1 ring-inset ring-gray-900/10" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
               </div>
               <div>
                 <div className="flex items-center gap-x-4 text-2xl lg:mt-20">

@@ -32,7 +32,7 @@ const PicRight = ({ subtitle, title, description, button, picture, color, titlec
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.1 }}
-            className="text-base font-semibold leading-7 text-[#474d53]">
+            className="text-xl font-semibold leading-7 text-[#474d53]">
             {subtitle}
           </motion.h2>
           <motion.h2

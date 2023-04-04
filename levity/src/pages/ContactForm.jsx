@@ -32,7 +32,7 @@ const ContactForm = () => {
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">CONTACT US</h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
-              Submit a curious question, a topic for conversation, or a crazy story that you would like to share with us :D
+              Submit a curious question, a topic for conversation, or a crazy story that you would like for us to share :D
             </p>
             <form ref={form} onSubmit={sendEmail} action="#" method="POST" className="mt-12">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

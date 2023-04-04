@@ -34,7 +34,7 @@ const EpisodeForm = () => {
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">Episode Form</h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Use form to make new episode
+          Use form to create a new episode
         </p>
       </div>
       <form onSubmit={handleSubmit} action="#" method="POST" className="mx-auto mt-8 max-w-xl">
