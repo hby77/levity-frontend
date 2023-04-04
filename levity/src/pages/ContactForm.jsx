@@ -29,7 +29,7 @@ const ContactForm = () => {
       <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">ASK A QUESTION OR SUBMIT A STORY</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900">SUBMIT A STORY OR QUESTION</h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
             </p>

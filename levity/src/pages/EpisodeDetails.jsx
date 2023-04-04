@@ -58,24 +58,13 @@ const EpisodeDetails = () => {
       </button>
       </div>
       {/* below this is an empty indigobox for the podcast episode */}
-      <div className="bg-indigo-100">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            <br />
-          </h2>
-          <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
-          </div>
-        </div>
-      </div>
+      <iframe height="200px" width="100%" frameborder="no" seamless src="https://player.simplecast.com/2d32a00b-1169-4e97-8164-f9e0da8f91a3?dark=true"></iframe>
       {/* above this is an empty indigobox for the podcast episode */}
     </div>
-      <Logos />
+      <Logos title={episode.title} />
     </>
 
   )
 }
 export default EpisodeDetails
-
-
-
 
