@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import axios from "axios"
+import { useEffect, useState } from "react"
 import Logos from "../components/Logos"
+import axios from "axios"
 
 const EpisodeDetails = () => {
 

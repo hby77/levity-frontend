@@ -1,7 +1,7 @@
-import { useState } from "react"
 import { signIn, signUp } from "../services/user"
-import image from "../images/Signin.png"
 import logo from "../images/SignupLogo.gif"
+import image from "../images/Signin.png"
+import { useState } from "react"
 
 const SignIn = () => {
 

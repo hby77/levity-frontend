@@ -1,6 +1,6 @@
+import image from "../images/Contact.png"
 import emailjs from '@emailjs/browser'
 import React, { useRef } from 'react'
-import image from "../images/Contact.png"
 
 const ContactForm = () => {
 

@@ -1,7 +1,7 @@
-import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { motion } from 'framer-motion'
+import { Disclosure } from '@headlessui/react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 const Nav = () => {
 
   return (

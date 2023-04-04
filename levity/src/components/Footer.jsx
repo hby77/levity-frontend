@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const Footer = () => {
   const navigation = {
@@ -12,7 +12,7 @@ const Footer = () => {
     social: [
       {
         name: 'Spotify',
-        href: 'https://open.spotify.com/episode/1lgdP5NsxkWhI2c3eEejid',
+        href: 'https://open.spotify.com/episode/1lgdP5NsxkWhI2c3eEejid', 
         icon: (props) => (
           <svg fill="currentColor" viewBox="0 0 16 16" {...props}>
             <path

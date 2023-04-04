@@ -2,9 +2,9 @@ import AboutPic from "../images/LevityAbout.gif"
 import PicRight from "../components/PicRight"
 import PicLeft from "../components/PicLeft"
 import Hero from "../components/Hero"
-import Hb from "../images/HBLevity.png"
 import Taemin from "../images/TaeminLevity.png"
 import Phil from "../images/PhilLevity.png"
+import Hb from "../images/HBLevity.png"
 
 const AboutUs = () => {
 
