@@ -41,7 +41,6 @@ const AboutUs = () => {
         color={"#e7e9ea"}
         titlecolor={"#f08336"}
         />
-
     </div>
   )
 }
