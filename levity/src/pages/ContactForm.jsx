@@ -30,7 +30,7 @@ const ContactForm = () => {
       <div className="pb-12 pt-16 sm:pt-20 lg:mx-auto lg:grid lg:grid-cols-2 ">
         <div className="flex justify-center px-6 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">CONTACT US</h2>
+            <h2 className="text-3xl font-black tracking-wide text-gray-900 sm:text-6xl">CONTACT US</h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               Submit a curious question, a topic for conversation, or a crazy story that you would like for us to share :D
             </p>

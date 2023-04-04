@@ -1,21 +1,11 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-// import { useParams } from "react-router-dom"
+
 const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => {
 
-  // const { id } = useParams()
+const navigate = useNavigate()
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   checkForm()
-  //   const res = await updateEpisode(id, form)
-  //   console.log("UPDATE EPISODE", res)
-  //   navigate(`/episode-list`)
-  //   getAllEpisodes()
-  // }
-
-  const navigate = useNavigate()
   return (
     <div className="bg-[#e7e9ea] py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-28">
@@ -37,7 +27,7 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
                   </time>
                 </div>
                 <div className="group relative max-w-xl">
-                  <h3 className="mt-3 text-4xl font-black leading-10 text-gray-900 group-hover:text-gray-600">
+                  <h3 className="mt-3 text-4xl font-black tracking-wide leading-10 text-gray-900 group-hover:text-gray-600">
                     <Link
                     to={`/episode-details/${id}`}>
                       <span className="absolute inset-0" />

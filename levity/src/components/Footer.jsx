@@ -81,7 +81,7 @@ const Footer = () => {
           <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
             {navigation.main.map((item) => (
               <motion.div whileHover={{ scale: 1.5 }} key={item.name} className="pb-6">
-                <a href={item.href} className="text-2xl font-black leading-6 text-white hover:text-gray-600">
+                <a href={item.href} className="text-2xl font-black leading-6 text-[#e7e9ea] hover:text-gray-600">
                   {item.name}
                 </a>
               </motion.div>
@@ -89,7 +89,7 @@ const Footer = () => {
           </nav>
           <div className="mt-10 flex justify-center space-x-10">
             {navigation.social.map((item) => (
-              <motion.a whileHover={{ scale: 1.5 }} key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+              <motion.a whileHover={{ scale: 1.5 }} key={item.name} href={item.href} className="text-[#e7e9ea] hover:text-gray-500">
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
               </motion.a>

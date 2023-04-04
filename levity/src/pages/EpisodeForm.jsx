@@ -32,7 +32,7 @@ const EpisodeForm = () => {
   return localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (
     <div className="isolate bg-[#e7e9ea] px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">Episode Form</h2>
+        <h2 className="text-3xl font-black tracking-wide text-gray-900 sm:text-6xl">Episode Form</h2>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Use form to create a new episode
         </p>
