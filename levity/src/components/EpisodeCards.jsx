@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 // import { useParams } from "react-router-dom"
 const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => {
 
@@ -20,7 +21,7 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
       <div className="mx-auto max-w-7xl px-6 lg:px-28">
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <div className=" space-y-20 lg:space-y-20">
-            <article className="relative isolate flex flex-col gap-12 lg:flex-row">
+            <motion.article whileHover={{ scale: 1.05 }} className="relative isolate flex flex-col gap-12 lg:flex-row">
               <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-[3/5] lg:w-96 lg:shrink-0">
                 <img
                   src={image}
@@ -55,7 +56,7 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
                   EDIT
                 </button></>)}
               </div>
-            </article>
+            </motion.article>
           </div>
         </div>
       </div>

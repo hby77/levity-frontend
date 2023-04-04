@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 
 
+
 const EpisodeList = ({ episodes, getAllEpisodes }) => {
 
   const handleDelete = async (id) => {
