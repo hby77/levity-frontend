@@ -3,17 +3,18 @@ import React, { useRef } from 'react'
 
 const ContactForm = () => {
   
-    const form = useRef();
+    const form = useRef()
   
     const sendEmail = (e) => {
-      e.preventDefault();
+      e.preventDefault()
   
       emailjs.sendForm('service_dhxvweb', 'template_5edq3hu', form.current, '48HCWvxYns80nxetn')
         .then((result) => {
-            console.log(result.text);
+            console.log(result.text)
         }, (error) => {
-            console.log(error.text);
-        });
+            console.log(error.text)
+        })
+        e.target.reset()
     }
 
   return (
@@ -43,6 +44,7 @@ const ContactForm = () => {
                       id="name"
                       type="text"
                       name="name"
+                      required
                       placeholder="Name"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -58,6 +60,7 @@ const ContactForm = () => {
                       id="email"
                       name="email"
                       type="email"
+                      required
                       placeholder="Email Address"
                       autoComplete="email"
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -78,6 +81,7 @@ const ContactForm = () => {
                     <textarea
                       id="message"
                       name="message"
+                      required
                       placeholder="Your Story or Question"
                       rows={4}
                       aria-describedby="message-description"
