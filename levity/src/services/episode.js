@@ -3,7 +3,7 @@ import Client from "./api"
 export const createEpisode =  async (form) => {
   try {
     const res = Client.post(
-      "http://127.0.0.1:5000/episodes", { title: form.title, description: form.description, image: form.image, date: form.date, likes: 0 },
+      "http://127.0.0.1:5000/episodes", { title: form.title, description: form.description, image: form.image, date: form.date, likes: 0, embeddedEpisode: form.embeddedEpisode },
       {
         headers: {
           "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export const createEpisode =  async (form) => {
   export const updateEpisode = async (id, form) => {
     try {
       const res = Client.put(
-        `http://127.0.0.1:5000/single_episode/${id}`, { title: form.title, description: form.description, image: form.image, date: form.date },
+        `http://127.0.0.1:5000/single_episode/${id}`, { title: form.title, description: form.description, image: form.image, date: form.date, embeddedEpisode: form.embeddedEpisode },
         {
           headers: {
             "Content-Type": "application/json",
