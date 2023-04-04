@@ -31,7 +31,7 @@ const EpisodeDetails = () => {
     console.log(like)
   }
 
-  console.log("Hello", episode.data)
+
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault()

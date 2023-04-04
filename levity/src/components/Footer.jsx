@@ -75,7 +75,7 @@ const Footer = () => {
   
 
     return (
-      <footer className="bg-black">
+      <footer className="bg-[#282828]">
         <div className="mx-auto max-w-7xl overflow-hidden py-8 px-6  lg:px-8">
           <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
             {navigation.main.map((item) => (

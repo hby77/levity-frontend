@@ -27,11 +27,11 @@ const SignIn = () => {
         <div className="flex flex-1 flex-col px-4 mt-8 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 ">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
-              <img
+              {/* <img
                 className="h-12 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt="Your Company"
-              />
+              /> */}
               <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
             </div>
             <div className="mt-8">

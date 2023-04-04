@@ -9,7 +9,7 @@ const Nav = () => {
   }
 
   return (
-    <Disclosure as="nav" className="bg-black shadow flex ">
+    <Disclosure as="nav" className="bg-[#282828] shadow flex ">
       {({ open }) => (
         <>
           <div className="mx-auto z-10 px-4 sm:px-6 lg:px-8">

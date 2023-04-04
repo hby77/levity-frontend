@@ -8,7 +8,7 @@ const RecentEpisodes = ({episodes}) => {
       <div className="bg-[#e7e9ea] py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h6 className="text-3xl font-black tracking-wide text-gray-900 sm:text-6xl">Latest Episodes</h6>
+            <h2 className="text-3xl font-black tracking-wide text-gray-900 sm:text-6xl">Latest Episodes</h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
               The Latest Episodes on The Levity Podcast
             </p>
