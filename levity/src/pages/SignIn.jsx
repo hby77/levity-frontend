@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { signIn, signUp } from "../services/user"
 import image from "../images/Signin.png"
+import logo from "../images/SignupLogo.gif"
 
 const SignIn = () => {
 
@@ -24,14 +25,14 @@ const SignIn = () => {
   return (
     <>
       <div className="flex min-h-screen">
-        <div className="flex flex-1 flex-col px-4 mt-8 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 ">
+        <div className="flex flex-1 flex-col px-4 mt-12 lg:py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 ">
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
-              {/* <img
-                className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              <img
+                className="h-68 w-auto"
+                src={logo}
                 alt="Your Company"
-              /> */}
+              />
               <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
             </div>
             <div className="mt-8">
