@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => {
 
-const navigate = useNavigate()
+  const navigate = useNavigate()
 
   return (
     <div className="bg-[#e7e9ea] py-12">
@@ -29,22 +29,22 @@ const navigate = useNavigate()
                 <div className="group relative max-w-xl">
                   <h3 className="mt-3 text-4xl font-black tracking-wide leading-10 text-gray-900 group-hover:text-gray-600">
                     <Link
-                    to={`/episode-details/${id}`}>
+                      to={`/episode-details/${id}`}>
                       <span className="absolute inset-0" />
                       {title}
                     </Link>
                   </h3>
                   <p className="mt-5 text-lg leading-6 text-gray-600">{description}</p>
                 </div>
-                {localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && ( <>
-                <button onClick={() => handleDelete(id)}
-                  className="my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                  DELETE
-                </button>
-                <button onClick={() => navigate(`/episode-form/${id}`)}
-                  className="mx-5 my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-yellow-500 hover:border-yellow-600 hover:bg-yellow-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                  EDIT
-                </button></>)}
+                {localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (<>
+                  <button onClick={() => handleDelete(id)}
+                    className="my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                    DELETE
+                  </button>
+                  <button onClick={() => navigate(`/episode-form/${id}`)}
+                    className="mx-5 my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-yellow-500 hover:border-yellow-600 hover:bg-yellow-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                    EDIT
+                  </button></>)}
               </div>
             </motion.article>
           </div>

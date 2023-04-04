@@ -3,9 +3,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 const Nav = () => {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
 
   return (
     <Disclosure as="nav" className="bg-[#282828] shadow flex ">
@@ -18,33 +15,33 @@ const Nav = () => {
                   <Link
                     to="/"
                     className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f1b8d5] hover:border-gray-300 hover:text-[#f86122]">
-                      <motion.h6
+                    <motion.h6
                       whileHover={{ scale: 1.5 }}>
                       HOME
-                      </motion.h6>
+                    </motion.h6>
                   </Link>
                   <Link
                     to="/about-us"
                     className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#ace81e] hover:border-gray-300 hover:text-[#7d9ce2]">
-                      <motion.h6
+                    <motion.h6
                       whileHover={{ scale: 1.5 }}
-                      >ABOUT
-                      </motion.h6>
+                    >ABOUT
+                    </motion.h6>
                   </Link>
                   <Link
                     to="/episode-list"
                     className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#65e3c6] hover:border-gray-300 hover:text-[#2035ab]">
-                      <motion.h6
+                    <motion.h6
                       whileHover={{ scale: 1.5 }}>
                       EPISODES
-                      </motion.h6>
+                    </motion.h6>
                   </Link>
                   <Link
                     to="/contact"
                     className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f3b918] hover:border-gray-300 hover:text-[#169342]">
                     <motion.h6
-                    whileHover={{ scale: 1.5 }}>
-                    CONTACT
+                      whileHover={{ scale: 1.5 }}>
+                      CONTACT
                     </motion.h6>
                   </Link>
                 </div>

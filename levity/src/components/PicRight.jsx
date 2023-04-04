@@ -1,12 +1,8 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 
-
-
-
-
 const PicRight = ({ subtitle, title, description, button, picture, color, titlecolor }) => {
-  console.log(titlecolor)
+
   return (
     <div className={`relative my-10 bg-[${color}]`}>
       <div
