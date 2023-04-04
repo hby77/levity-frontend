@@ -19,7 +19,7 @@
 ***
 ### ***Screenshots***
 #### Picture of the Home Page
-![Image](V)
+![Image]()
 #### Picture of Episodes
 ![Image]()
 #### Picture of Contact Form
