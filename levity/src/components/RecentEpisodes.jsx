@@ -31,11 +31,11 @@ const RecentEpisodes = ({episodes}) => {
                   </time>
                   <div className="-ml-4 flex items-center gap-x-4">
                     <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
-                      <circle cx={1} cy={1} r={1} />
+                      
                     </svg>
                   </div>
                 </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                <h3 className="mt-3 text-2xl font-semibold leading-6 text-white">
                 <Link
                     to={`/episode-details/${episode._id.$oid}`}>
                       <span className="absolute inset-0" />

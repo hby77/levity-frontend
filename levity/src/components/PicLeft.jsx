@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-const PicLeft = ({ subtitle, title, description, button, picture, color, titlecolor, titlehover, link }) => {
+const PicLeft = ({ subtitle, title, description, button, picture, color, titlecolor }) => {
 
   return (
     <div className={`relative mt-20 bg-[${color}]`}>
@@ -40,7 +40,7 @@ const PicLeft = ({ subtitle, title, description, button, picture, color, titleco
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.1 }}
-            className={`mt-2 text-3xl font-black tracking-wide text-[${titlecolor}] sm:text-6xl`}>
+            className={`mt-2 text-3xl font-black tracking-wide text-[${titlecolor}] hover:text-[#282828] sm:text-6xl`}>
             {title}
           </motion.h2>
           <motion.p
