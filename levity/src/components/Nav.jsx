@@ -1,6 +1,5 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 const Nav = () => {
@@ -15,25 +14,7 @@ const Nav = () => {
           <div className="mx-auto z-10 px-4 sm:px-6 lg:px-8">
             <div className="flex h-12 justify-between lg:h-32">
               <div className="flex">
-                {/* <div className="flex flex-shrink-0 items-center">
-                  <Link to="/">
-                    <img
-                      className="block h-12 w-auto lg:hidden"
-                      src={logo}
-                      alt="Your Company"
-                    />
-                  </Link >
-                  <Link to="/">
-                    <img
-                      className="hidden h-12 w-auto lg:block"
-                      src={logo}
-                      alt="Your Company"
-                      href="#"
-                    />
-                  </Link>
-                </div> */}
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <Link
                     to="/"
                     className="inline-flex text-lg items-center px-1 pt-1 lg:text-5xl font-black text-[#f1b8d5] hover:border-gray-300 hover:text-[#f86122]">
