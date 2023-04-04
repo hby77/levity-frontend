@@ -3,20 +3,20 @@ import React, { useRef } from 'react'
 import image from "../images/Contact.png"
 
 const ContactForm = () => {
-  
-    const form = useRef()
-  
-    const sendEmail = (e) => {
-      e.preventDefault()
-  
-      emailjs.sendForm('service_dhxvweb', 'template_5edq3hu', form.current, '48HCWvxYns80nxetn')
-        .then((result) => {
-            console.log(result.text)
-        }, (error) => {
-            console.log(error.text)
-        })
-        e.target.reset()
-    }
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_dhxvweb', 'template_5edq3hu', form.current, '48HCWvxYns80nxetn')
+      .then((result) => {
+        console.log(result.text)
+      }, (error) => {
+        console.log(error.text)
+      })
+    e.target.reset()
+  }
 
   return (
     <div className="relative bg-[#e7e9ea]">
@@ -68,7 +68,6 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
-                
                 <div className="sm:col-span-2">
                   <div className="flex justify-between text-sm leading-6">
                     <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -95,7 +94,6 @@ const ContactForm = () => {
               <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
                 <button
                   type="submit"
-                  
                   className="bg-[#e7e9ea] transform  border-2 w-24 h-24 rounded-full duration-500 border-black hover:bg-black hover:text-white text-2xl m-auto inset-0 font-semibold leading-7 text-center text-gray-800"
                 >
                   Submit

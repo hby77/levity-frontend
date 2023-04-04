@@ -1,4 +1,3 @@
-import axios from "axios"
 import { useState } from "react"
 import { createEpisode } from "../services/episode"
 import { useNavigate } from "react-router-dom"
@@ -19,15 +18,12 @@ const EpisodeForm = () => {
     setForm({ ...form, [e.target.id]: e.target.value })
   }
 
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     const res = await createEpisode(form)
-    console.log("CREATE EPISODE", res)
     navigate("/episode-list")
     window.location.reload()
   }
-
 
   return localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (
     <div className="isolate bg-[#e7e9ea] px-6 py-16 lg:px-8">

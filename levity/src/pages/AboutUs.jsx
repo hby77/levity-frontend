@@ -8,7 +8,6 @@ import Phil from "../images/PhilLevity.png"
 
 const AboutUs = () => {
 
-
   return (
     <div className="bg-[#e7e9ea]">
       <Hero

@@ -1,20 +1,13 @@
-import axios from "axios"
 import EpisodeCards from "../components/EpisodeCards"
 import { deleteEpisode } from "../services/episode"
 import { useNavigate } from "react-router-dom"
-
-
-
 
 const EpisodeList = ({ episodes, getAllEpisodes }) => {
 
   const handleDelete = async (id) => {
     const res = await deleteEpisode(id)
-    console.log("DELETED", res)
     getAllEpisodes()
   }
-
-
 
   const navigate = useNavigate()
 

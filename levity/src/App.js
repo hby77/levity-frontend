@@ -12,38 +12,36 @@ import Nav from "./components/Nav"
 import Home from "./pages/Home"
 import axios from "axios"
 
-  function App() {
+function App() {
 
-    const [episodes, setEpisodes] = useState([])
+  const [episodes, setEpisodes] = useState([])
 
-    const getAllEpisodes = async () => {
-      const response = await axios.get("http://127.0.0.1:5000/episodes")
-      await response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
-      console.log(response.data)
-      setEpisodes(response.data)
-    }
-
-    useEffect(() => {
-      getAllEpisodes()
-    }, [])
-
-
-    return (
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/episode-details/:id" element={<EpisodeDetails />} />
-          <Route path="/episode-form/:id" element={<EditEpisodeForm getAllEpisodes={getAllEpisodes}/>} />
-          <Route path="/episode-list" element={<EpisodeList episodes={episodes} setEpisodes={setEpisodes} useEffect={useEffect} getAllEpisodes={getAllEpisodes}/>} />
-          <Route path="/episode-form" element={<EpisodeForm />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/" element={<Home episodes={episodes} />} />
-        </Routes>
-        <Footer />
-      </div>
-    );
+  const getAllEpisodes = async () => {
+    const response = await axios.get("http://127.0.0.1:5000/episodes")
+    await response.data.sort((a, b) => new Date(b.date) - new Date(a.date))
+    setEpisodes(response.data)
   }
+
+  useEffect(() => {
+    getAllEpisodes()
+  }, [])
+
+  return (
+    <div>
+      <Nav />
+      <Routes>
+        <Route path="/episode-details/:id" element={<EpisodeDetails />} />
+        <Route path="/episode-form/:id" element={<EditEpisodeForm getAllEpisodes={getAllEpisodes} />} />
+        <Route path="/episode-list" element={<EpisodeList episodes={episodes} setEpisodes={setEpisodes} useEffect={useEffect} getAllEpisodes={getAllEpisodes} />} />
+        <Route path="/episode-form" element={<EpisodeForm />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/" element={<Home episodes={episodes} />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
 
 export default App;

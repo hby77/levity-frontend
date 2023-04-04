@@ -19,7 +19,6 @@ const SignIn = () => {
     const res = await signIn(form)
     localStorage.setItem('token', res.data.access_token)
     localStorage.setItem('id', res.data.user._id.$oid)
-    console.log("RES", res)
   }
 
   return (
