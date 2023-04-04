@@ -1,5 +1,21 @@
+import emailjs from '@emailjs/browser'
+import React, { useRef } from 'react'
+
 const ContactForm = () => {
   
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_dhxvweb', 'template_5edq3hu', form.current, '48HCWvxYns80nxetn')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
+
   return (
     <div className="relative bg-white">
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
@@ -16,7 +32,7 @@ const ContactForm = () => {
             <p className="mt-2 text-lg leading-8 text-gray-600">
               Proin volutpat consequat porttitor cras nullam gravida at orci molestie a eu arcu sed ut tincidunt magna.
             </p>
-            <form onSubmit={} action="#" method="POST" className="mt-16">
+            <form ref={form} onSubmit={sendEmail} action="#" method="POST" className="mt-16">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="sm:col-span-2">
                   <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
