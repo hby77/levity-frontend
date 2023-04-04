@@ -10,7 +10,7 @@ const AboutUs = () => {
 
 
   return (
-    <div>
+    <div className="bg-[#e7e9ea]">
       <Hero
         picture={AboutPic}
       />

@@ -48,11 +48,11 @@ const EpisodeCards = ({ title, date, description, image, id, handleDelete }) => 
                 </div>
                 {localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && ( <>
                 <button onClick={() => handleDelete(id)}
-                  className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 m-2">
+                  className="my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-red-500 hover:border-red-600 hover:bg-red-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                   DELETE
                 </button>
                 <button onClick={() => navigate(`/episode-form/${id}`)}
-                  className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 m-2">
+                  className="mx-5 my-8 bg-white text-gray-800 font-bold rounded border-b-2 border-yellow-500 hover:border-yellow-600 hover:bg-yellow-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
                   EDIT
                 </button></>)}
               </div>

@@ -29,6 +29,7 @@ console.log(titlecolor)
           transition={{ ease: "easeOut", duration: 0.6 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
+          whileHover={{ scale: 1.1 }}
           className="text-base font-semibold leading-7 text-[#474d53]">
           {subtitle}
           </motion.h2>
@@ -37,6 +38,7 @@ console.log(titlecolor)
           transition={{ ease: "easeOut", duration: 0.7 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
+          whileHover={{ scale: 1.2 }}
           className={`mt-2 text-3xl font-black tracking-wide text-[${titlecolor}] hover:text-[${titlehover}] sm:text-6xl`}>
           {title}
           </motion.h6>
@@ -45,6 +47,7 @@ console.log(titlecolor)
           transition={{ ease: "easeOut", duration: 0.8 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
+          whileHover={{ scale: 1.1 }}
           className="mt-6 text-xl font-base tracking-wide leading-7 text-[#474d53]">{description}
           </motion.p>
           <motion.div 
