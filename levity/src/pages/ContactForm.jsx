@@ -19,7 +19,7 @@ const ContactForm = () => {
     }
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-[#e7e9ea]">
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"

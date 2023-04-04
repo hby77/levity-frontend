@@ -17,7 +17,7 @@ const AboutUs = () => {
       <PicLeft
         subtitle={"Host"}
         title={"Taemin Lee"}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
+        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
         button={"Visit the help center"}
         picture={Taemin}
         color={"#e7e9ea"} 
@@ -26,7 +26,7 @@ const AboutUs = () => {
       <PicRight
         subtitle={"Co-Host"}
         title={"HyunBin Yim"}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
+        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
         button={"Visit the help center"}
         picture={Hb}
         color={"#e7e9ea"} 
@@ -35,7 +35,7 @@ const AboutUs = () => {
       <PicLeft
         subtitle={"Co-Host"}
         title={"Phil Phan"}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
+        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egesta tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis."}
         button={"Visit the help center"}
         picture={Phil}
         color={"#e7e9ea"}

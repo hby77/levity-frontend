@@ -24,16 +24,16 @@ const SignIn = () => {
 
   return (
     <>
-      <div className="flex min-h-screen">
+      <div className="bg-[#e7e9ea] flex min-h-screen">
         <div className="flex flex-1 flex-col px-4 mt-12 lg:py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 ">
           <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div>
+            <div className="flex flex-col text-center">
               <img
                 className="h-68 w-auto"
                 src={logo}
                 alt="Your Company"
               />
-              <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+              <h2 className="mt-20 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
             </div>
             <div className="mt-8">
               <div className="mt-6">
@@ -75,10 +75,11 @@ const SignIn = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      className="flex w-full justify-center mt-12 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Sign in
                     </button>
+                    
                   </div>
                 </form>
               </div>
