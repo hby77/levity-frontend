@@ -73,7 +73,7 @@ const EpisodeForm = () => {
           </div>
           <div className="sm:col-span-2">
             <label htmlFor="description" className="block text-sm font-semibold leading-6 text-gray-900">
-              Description 
+              Description
             </label>
             <div className="mt-2.5">
               <input

@@ -1,7 +1,7 @@
 import axios from "axios"
 
-  export const signIn = async (form) => {
-    try {
+export const signIn = async (form) => {
+  try {
     const res = axios.post(
       "http://127.0.0.1:5000/signin", { email: form.email, password: form.password },
       {
@@ -12,7 +12,7 @@ import axios from "axios"
       }
     )
     return res
-    } catch (e) {
+  } catch (e) {
     return e.response
   }
 }
