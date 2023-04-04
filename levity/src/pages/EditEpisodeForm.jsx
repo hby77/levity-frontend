@@ -3,9 +3,8 @@ import { useParams, useNavigate } from "react-router-dom"
 import { updateEpisode } from "../services/episode"
 import axios from "axios"
 
+const EditEpisodeForm = ({ getAllEpisodes }) => {
 
-const EditEpisodeForm = ({getAllEpisodes}) => {
-  
   const { id } = useParams()
   const navigate = useNavigate()
   const [episode, setEpisode] = useState({})
@@ -16,17 +15,15 @@ const EditEpisodeForm = ({getAllEpisodes}) => {
     image: '',
     embeddedEpisode: ''
   })
-  
+
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.id]: e.target.value})
+    setForm({ ...form, [e.target.id]: e.target.value })
   }
-  
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     checkForm()
     const res = await updateEpisode(id, form)
-    console.log("UPDATE EPISODE", res)
     navigate(`/episode-list`)
     getAllEpisodes()
   }
@@ -41,14 +38,12 @@ const EditEpisodeForm = ({getAllEpisodes}) => {
 
   useEffect(() => {
     getUpdate()
-  },[])
+  }, [])
 
-
-const getUpdate = async () => {
-  const response = await axios.get(`http://127.0.0.1:5000/single_episode/${id}`)
-  console.log(response)
-  setEpisode(response.data) 
-}
+  const getUpdate = async () => {
+    const response = await axios.get(`http://127.0.0.1:5000/single_episode/${id}`)
+    setEpisode(response.data)
+  }
 
   return localStorage.getItem('id') === "6428fdcacbf30d7c30089d83" && (
     <div className="isolate bg-[#e7e9ea] px-6 py-16 lg:px-8">
