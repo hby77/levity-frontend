@@ -32,7 +32,7 @@ const SignIn = () => {
                 src={logo}
                 alt="Your Company"
               />
-              <h2 className="mt-20 text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+              <h2 className="mt-20 text-3xl font-black tracking-tight text-gray-900 sm:text-6xl">Log In</h2>
             </div>
             <div className="mt-8">
               <div className="mt-6">
@@ -46,6 +46,7 @@ const SignIn = () => {
                         id="email"
                         name="email"
                         type="email"
+                        placeholder="email@gmail.com"
                         onChange={handleChange}
                         value={form.email}
                         autoComplete="email"
@@ -63,6 +64,7 @@ const SignIn = () => {
                         id="password"
                         name="password"
                         type="password"
+                        placeholder="********"
                         onChange={handleChange}
                         value={form.password}
                         autoComplete="current-password"
@@ -71,12 +73,12 @@ const SignIn = () => {
                       />
                     </div>
                   </div>
-                  <div>
+                  <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8"> 
                     <button
                       type="submit"
-                      className="flex w-full justify-center mt-12 rounded-md bg-gray-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                      className="bg-[#e7e9ea] transform border-2 w-24 h-24 rounded-full duration-500 border-black hover:bg-black hover:text-white text-2xl m-auto inset-0 font-semibold leading-7 text-center text-gray-800"
                     >
-                      Sign in
+                      Sign In
                     </button>
 
                   </div>
