@@ -45,7 +45,7 @@ const EpisodeDetails = () => {
         </div>
         <iframe className="rounded-xl mt-8" src={episode.embeddedEpisode} width="100%" height="352" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
-      <Logos title={episode.title} />
+      <Logos id={id} title={episode.title} />
     </>
   )
 }

@@ -51,3 +51,20 @@ export const createEpisode =  async (form) => {
   }
   
 }
+
+export const updateTracks = async (id, title, episode_title) => {
+  try {
+    const res = Client.put(
+      `http://127.0.0.1:5000/episode_tracks/${id}`, {track: [{title: title, episode_title: episode_title}]},
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    )
+    return res
+    } catch (e) {
+    return e.response
+  }
+}
