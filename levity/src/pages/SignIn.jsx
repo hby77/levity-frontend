@@ -1,10 +1,13 @@
 import { signIn, signUp } from "../services/user"
 import logo from "../images/SignupLogo.gif"
+import { useNavigate } from "react-router-dom"
 import image from "../images/Signin.png"
 import { useState } from "react"
 
+
 const SignIn = () => {
 
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -19,6 +22,7 @@ const SignIn = () => {
     const res = await signIn(form)
     localStorage.setItem('token', res.data.access_token)
     localStorage.setItem('id', res.data.user._id.$oid)
+    navigate(`/`)
   }
 
   return (

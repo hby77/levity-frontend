@@ -19,11 +19,11 @@
 ***
 ### ***Screenshots***
 #### Picture of the Home Page
-![Image]()
+![Image](/levity/src/images/HomePage.png)
 #### Picture of Episodes
-![Image]()
+![Image](/levity/src/images/EpisodePage.png)
 #### Picture of Contact Form
-![Image]()
+![Image](/levity/src/images/ContactPage.png)
 ***
 ### ***Credits***
 #### [Google](https://www.google.com)
